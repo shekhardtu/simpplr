@@ -1,7 +1,7 @@
 {
   "name": "scss-jquery-boilerplate",
   "version": "1.0.0",
-  "description": "A basic boilerplate with webpack, jquery and sass preprocessor. It can serve for quick start your interview assignment boilerplate and a prototype of any application. Not recommended for production applications.",
+  "description": "A basic boilerplate with webpack, jquery and sass preprocessor. It can serve for quick start your interview assignment or a prototype of an application. Not recommended for production applications.",
   "main": "./src/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
