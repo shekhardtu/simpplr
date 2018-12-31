@@ -1,15 +1,59 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>javascript project setup</title>
-<link href="main.css" rel="stylesheet"></head>
-<body>
-	This example illustrate how to setup simple javascript project using webpack and babel.
+  <head>
+    <title>Simpplr Assingment Setup</title>
+  <link href="main.css" rel="stylesheet"></head>
 
-	<div id="container" style="background-color: yellow">
-		Hide this line on button click!
-	</div>
-	<button id="hideBtn">try!</button>
-
-<script type="text/javascript" src="bundle.js"></script></body>
+  <body>
+    <header class="Header u-container">
+      <div class="u-row">
+        <section
+          class="Header__search-term search-term flex justify-content-left align-item-center"
+        >
+          Search for: <span class="search-term--keyword">"Test"</span>
+        </section>
+      </div>
+      <div class="u-row">
+        <nav class="Header-nav Nav">
+          <div class="Nav-item Nav-item--active">Top</div>
+          <div class="Nav-item">Sites</div>
+          <div class="Nav-item">Content</div>
+          <div class="Nav-item">People</div>
+          <div class="Nav-item">Intranet Files</div>
+          <div class="Nav-item">Google Drive Files</div>
+          <div class="Nav-item">Feed</div>
+        </nav>
+      </div>
+    </header>
+    <main class="u-container">
+      <section class="section">
+        <div class="section__item card card--site">
+          <div class="card__img card__img--site"></div>
+          <div class="section__item__info">
+            <div class="section__item__tag"></div>
+          </div>
+        </div>
+        <div class="section section__item section__item--block-post">
+          <div class="section__item__img"></div>
+          <div class="section__item__info"></div>
+        </div>
+        <div class="section  section__item section__item--person">
+          <div class="section__item__img"></div>
+          <div class="section__item__info"></div>
+        </div>
+        <div class="section section__item section__item--page">
+          <div class="section__item__img"></div>
+          <div class="section__item__info"></div>
+        </div>
+        <div class="section section__item section__item--album">
+          <div class="section__item__img"></div>
+          <div class="section__item__info"></div>
+        </div>
+      </section>
+      <aside class="section">
+        <section class="section">Intranet Files</section>
+        <section class="section">Google Drive Files</section>
+      </aside>
+    </main>
+  <script type="text/javascript" src="bundle.js"></script></body>
 </html>

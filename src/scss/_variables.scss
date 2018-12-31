@@ -1,0 +1,37 @@
+//
+// Color System
+//
+
+$green-1: #74d4be !default;
+$green-2: #00b590 !default;
+
+$grey-1: #a5a5a5 !default;
+$grey-2: #e8e8e8 !default;
+$grey-3: #7e7e7e !default;
+$grey-4: #626262 !default;
+$grey-5: #545454 !default;
+
+$font-size-xxs: 10px;
+$font-size-xs: 12px;
+$font-size-s: 14px;
+$font-size-base: 16px;
+$font-size-m: 18px;
+$font-size-l: 20px;
+$font-size-xl: 24px;
+
+$mobile-up: 601px !default;
+$tablet-up: 993px !default;
+$desk-up: 1201px !default;
+$mobile: 600px !default;
+$tablet: 992px !default;
+$desk: 1200px !default;
+
+$medium-and-up: 'only screen and (min-width : #{$mobile-up})' !default;
+$large-and-up: 'only screen and (min-width : #{$tablet-up})' !default;
+$extra-large-and-up: 'only screen and (min-width : #{$desk-up})' !default;
+$small-and-down: 'only screen and (max-width : #{$mobile})' !default;
+$medium-and-down: 'only screen and (max-width : #{$tablet})' !default;
+$medium-only: 'only screen and (min-width : #{$mobile-up}) and (max-width : #{$tablet})' !default;
+
+$number-columns: 12 !default;
+$gutter-width: 30px !default;

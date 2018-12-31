@@ -1,15 +1,411 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>javascript project setup</title>
-</head>
-<body>
-	This example illustrate how to setup simple javascript project using webpack and babel.
+  <head>
+    <title>Simpplr Assingment Setup</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
 
-	<div id="container" style="background-color: yellow">
-		Hide this line on button click!
-	</div>
-	<button id="hideBtn">try!</button>
+  <body>
+    <header class="Header u-container">
+      <div class="u-row">
+        <section
+          class="Header__search-term search-term col col-md-12 flex justify-content-left align-item-center"
+        >
+          Search for: <span class="search-term--keyword">"Test"</span>
+        </section>
+      </div>
 
-</body>
+      <div class="u-row">
+        <nav class="Header-nav Nav col col-md-12">
+          <div class="Nav-item is-active">Top</div>
+          <div class="Nav-item">Sites (4)</div>
+          <div class="Nav-item">Content (167)</div>
+          <div class="Nav-item">People (72)</div>
+          <div class="Nav-item">Intranet Files (141)</div>
+          <div class="Nav-item">Google Drive Files (197)</div>
+          <div class="Nav-item">Feed</div>
+        </nav>
+      </div>
+    </header>
+    <main class="u-container SearchPage">
+      <div class="u-row">
+        <section class="u-section  col col-md-12 col-xl-8 col-lg-8">
+          <div class="SearchPage-result">
+            <div class="Card Card--site">
+              <div class="Card-img">
+                <img
+                  class="Card-img-src"
+                  src="https://placekitten.com/300/300"
+                />
+              </div>
+              <div class="Card-info">
+                <div class="Card-info-tag">Site</div>
+                <div class="Card-info-details">
+                  <div class="Card-info-details--title">Social Events</div>
+                  <div class="Card-info-details--excerpt">
+                    Activities outside of work
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="Card Card--blog">
+              <div class="Card-img">
+                <img
+                  class="Card-img-src"
+                  src="https://placekitten.com/300/300"
+                />
+              </div>
+              <div class="Card-info">
+                <div class="Card-info-tag">Blog post</div>
+                <div class="Card-info-details">
+                  <div class="Card-info-details--title">
+                    Another news article
+                  </div>
+                  <div class="Card-info-details--excerpt">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+                    eius earum, praesentium repellat nemo odit eaque incidunt ex
+                    explicabo autem et laborum modi consequatur dolor,
+                    repudiandae necessitatibus asperiores voluptate voluptatem!
+                  </div>
+                  <div class="Card-info-details--publish">
+                    By
+                    <span class="Card-info-details--publish--name"
+                      >User name</span
+                    >
+                    on Aug 17, 2015
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="Card Card--person">
+              <div class="Card-img">
+                <img
+                  class="Card-img-src Card-img-src--round"
+                  src="https://placekitten.com/100/100"
+                />
+              </div>
+              <div class="Card-info">
+                <div class="Card-info-tag">Person</div>
+                <div class="u-row">
+                  <div class="col col-md-6">
+                    <div class="Card-info-details">
+                      <div class="Card-info-details--title">Emma Okeefe</div>
+                      <div class="Card-info-details--designation">
+                        Vice President of Sales - Sales
+                      </div>
+                      <div class="Card-info-details--publish">
+                        Milpitas, CA, USA
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="col col-md-6 u-flex u-flex--row u-align--item-start"
+                  >
+                    <div class="Card-info-details">
+                      <div class="Card-info-details--number u-color-green-1">
+                        +1 (650) 987 5348 (Ext. +277)
+                      </div>
+                      <div class="Card-info-details--email u-color-green-1">
+                        emma.okeefe@companyname.com
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="Card Card--person">
+              <div class="Card-img">
+                <img
+                  class="Card-img-src Card-img-src--round"
+                  src="https://placekitten.com/300/300"
+                />
+              </div>
+              <div class="Card-info">
+                <div class="Card-info-tag">Person</div>
+                <div class="u-row">
+                  <div class="col col-md-6">
+                    <div class="Card-info-details">
+                      <div class="Card-info-details--title">Social Events</div>
+                      <div class="Card-info-details--excerpt">
+                        Activities outside of work
+                      </div>
+                      <div class="Card-info-details--publish">
+                        By
+                        <span
+                          class="Card-info-details--publish--name u-color-green-1"
+                          >User name</span
+                        >
+                        on Aug 17, 2015
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="col col-md-6 u-flex u-flex--row u-align--item-start"
+                  >
+                    <div class="Card-info-details">
+                      <div class="Card-info-details--number u-color-green-1">
+                        +1 (650) 987 5348 (Ext. +277)
+                      </div>
+                      <div class="Card-info-details--email u-color-green-1">
+                        emma.okeefe@companyname.com
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="Card Card--person">
+              <div class="Card-img">
+                <img
+                  class="Card-img-src Card-img-src--round"
+                  src="https://placekitten.com/300/300"
+                />
+              </div>
+              <div class="Card-info">
+                <div class="Card-info-tag">Person</div>
+                <div class="u-row">
+                  <div class="col col-md-6">
+                    <div class="Card-info-details">
+                      <div class="Card-info-details--title">Social Events</div>
+                      <div class="Card-info-details--excerpt">
+                        Activities outside of work
+                      </div>
+                      <div class="Card-info-details--publish">
+                        By
+                        <span
+                          class="Card-info-details--publish--name u-color-green-1"
+                          >User name</span
+                        >
+                        on Aug 17, 2015
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="col col-md-6 u-flex u-flex--row u-align--item-start"
+                  >
+                    <div class="Card-info-details">
+                      <div class="Card-info-details--number u-color-green-1">
+                        +1 (650) 987 5348 (Ext. +277)
+                      </div>
+                      <div class="Card-info-details--email u-color-green-1">
+                        emma.okeefe@companyname.com
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="Card Card--site">
+              <div class="Card-img">
+                <img
+                  class="Card-img-src"
+                  src="https://placekitten.com/300/300"
+                />
+              </div>
+              <div class="Card-info">
+                <div class="Card-info-tag">Site</div>
+                <div class="Card-info-details">
+                  <div class="Card-info-details--title">Technical Support</div>
+                </div>
+              </div>
+            </div>
+            <div class="Card Card--page">
+              <div class="Card-img">
+                <img
+                  class="Card-img-src"
+                  src="https://placekitten.com/300/300"
+                />
+              </div>
+              <div class="Card-info">
+                <div class="Card-info-tag">Page</div>
+                <div class="Card-info-details">
+                  <div class="Card-info-details--title">
+                    Another page article
+                  </div>
+                  <div class="Card-info-details--excerpt">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Unde, quidem et. Excepturi ipsa fugit eligendi adipisci
+                    molestias eos vero, sunt ipsum doloribus animi, maxime nihil
+                    molestiae perferendis saepe distinctio nam.
+                  </div>
+                  <div class="Card-info-details--publish">
+                    In
+                    <span
+                      class="Card-info-details--publish--name u-color-green-1"
+                      >Cafetaria</span
+                    >
+                    on Feb 11, 2016 (Edited)
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="Card Card--album">
+              <div class="Card-img">
+                <img
+                  class="Card-img-src"
+                  src="https://placekitten.com/300/300"
+                />
+              </div>
+              <div class="Card-info">
+                <div class="Card-info-tag">Album</div>
+                <div class="Card-info-details">
+                  <div class="Card-info-details--title">
+                    Planing for the future
+                  </div>
+
+                  <div class="Card-info-details--publish">
+                    In
+                    <span
+                      class="Card-info-details--publish--name u-color-green-1"
+                      >Human Resource</span
+                    >
+                    on Aug 17, 2015
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <aside class="section SideBar col col-md-4 col-xl-4 col-lg-4">
+          <section class="section row">
+            <div class="SideBar-widget col col-md-12">
+              <div class="SideBar-widget-heading">Intranet Files (141)</div>
+              <div class="SideBar-widget-files">
+                <div class="Files Files--folder">
+                  <div class="Files-icon">
+                    <img
+                      class="Files-icon-src"
+                      src="https://placekitten.com/300/300"
+                    />
+                  </div>
+                  <div class="Files-info">
+                    <div class="Files-info--title">Sales</div>
+                    <div class="Files-info--location">
+                      In <span class="u-color-green-1">Sales</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="Files Files--folder">
+                  <div class="Files-icon">
+                    <img
+                      class="Files-icon-src"
+                      src="https://placekitten.com/300/300"
+                    />
+                  </div>
+                  <div class="Files-info">
+                    <div class="Files-info--title">Sales</div>
+                    <div class="Files-info--location">
+                      In <span class="u-color-green-1">Sales</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="Files Files--folder">
+                  <div class="Files-icon">
+                    <img
+                      class="Files-icon-src"
+                      src="https://placekitten.com/300/300"
+                    />
+                  </div>
+                  <div class="Files-info">
+                    <div class="Files-info--title">Sales</div>
+                    <div class="Files-info--location">
+                      In <span class="u-color-green-1">Sales</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="Files Files--folder">
+                  <div class="Files-icon">
+                    <img
+                      class="Files-icon-src"
+                      src="https://placekitten.com/300/300"
+                    />
+                  </div>
+                  <div class="Files-info">
+                    <div class="Files-info--title">Sales</div>
+                    <div class="Files-info--location">
+                      In <span class="u-color-green-1">Sales</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="SideBar-widget-viewAll">
+                  <span class="u-color-green-1"
+                    >View all google drive files</span
+                  >
+                </div>
+              </div>
+            </div>
+          </section>
+          <div class="SideBar-widget col col-md-12">
+            <div class="SideBar-widget-heading">Google Drive Files (197)</div>
+            <div class="SideBar-widget-files">
+              <div class="Files Files--folder">
+                <div class="Files-icon">
+                  <img
+                    class="Files-icon-src"
+                    src="https://placekitten.com/300/300"
+                  />
+                </div>
+                <div class="Files-info">
+                  <div class="Files-info--title">Sales</div>
+                  <div class="Files-info--location">
+                    In <span class="u-color-green-1">Sales</span>
+                  </div>
+                </div>
+              </div>
+              <div class="Files Files--folder">
+                <div class="Files-icon">
+                  <img
+                    class="Files-icon-src"
+                    src="https://placekitten.com/300/300"
+                  />
+                </div>
+                <div class="Files-info">
+                  <div class="Files-info--title">Sales</div>
+                  <div class="Files-info--location">
+                    In <span class="u-color-green-1">Sales</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="Files Files--folder">
+                <div class="Files-icon">
+                  <img
+                    class="Files-icon-src"
+                    src="https://placekitten.com/300/300"
+                  />
+                </div>
+                <div class="Files-info">
+                  <div class="Files-info--title">Sales</div>
+                  <div class="Files-info--location">
+                    In <span class="u-color-green-1">Sales</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="Files Files--folder">
+                <div class="Files-icon">
+                  <img
+                    class="Files-icon-src"
+                    src="https://placekitten.com/300/300"
+                  />
+                </div>
+                <div class="Files-info">
+                  <div class="Files-info--title">Sales</div>
+                  <div class="Files-info--location">
+                    In <span class="u-color-green-1">Sales</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="SideBar-widget-viewAll">
+              <span class="u-color-green-1">View all google drive files</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </main>
+  </body>
 </html>

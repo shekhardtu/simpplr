@@ -1,0 +1,36 @@
+// Media of at least the minimum breakpoint width. No query for the smallest breakpoint.
+// Makes the @content apply to the given breakpoint and wider.
+@mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
+  $min: breakpoint-min($name, $breakpoints);
+  @if $min {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+/// Grid system
+//
+// Generate semantic grid columns with these mixins.
+
+@mixin make-container($gutter: $grid-gutter-width) {
+  max-width: 1110px;
+  padding-right: $gutter / 2;
+  padding-left: $gutter / 2;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@mixin make-row($gutter: $grid-gutter-width) {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -$gutter / 2;
+  margin-left: -$gutter / 2;
+}
+
+@mixin make-col($columns: $grid-columns) {
+  width: cal(100% / $columns) px;
+  flex-wrap: wrap;
+}

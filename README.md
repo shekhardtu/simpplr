@@ -1,11 +1,3 @@
-# SCSS jQuery Boilerplate
-
-**Start your interview assignment/prototype in seconds**
-
-Readymade boilerplate `npm package` to start interview assignment with configured SCSS, Babel loaders and jQuery library.
-
-Scaffolding to start your project in few seconds.
-
 ## Features
 
 **ES6/ESNext** - Write your javascript with latest ECMA version, Babel will transpile in ES5 for backwards compatibility <br>
@@ -14,7 +6,6 @@ Scaffolding to start your project in few seconds.
 
 ## Commands
 
-- `npm install scss-jquery-boilerplate` - Download `npm package` of boilerplate
 - `npm install` - Install all dependency
 - `npm run start` - Start your webpack-server
 - `npm run build` - Create build files with compiled SCSS and bundled jQuery

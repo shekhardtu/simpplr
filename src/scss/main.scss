@@ -1,19 +1,210 @@
+@import './reset';
+@import './fontIcon';
+@import './variables';
+@import './mixins';
+@import './utility';
+@import './grid';
+
+*,
 html,
-body {
-  height: 100%;
+body,
+::after,
+::before {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.3em;
+  box-sizing: border-box;
 }
 
-.class {
-  color: #fff;
+.Header {
+  margin: 30px auto;
+  @media only screen and (max-width: 768px) {
+    padding: 0 20px;
+    margin: 30px auto;
+  }
+  &__search-term {
+    padding: 30px 0 10px;
+    color: $grey-5;
+    font-size: $font-size-m;
+  }
 }
 
-#hideBtn {
-  width: 100px;
-  height: 50px;
-  border: 2px solid #000;
+%shared-border {
+  border-bottom: 2px solid $green-2;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
-#hideBtn {
-  width: 100px;
-  height: 50px;
-  border: 2px solid red;
+
+%shared-before-props {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: $font-size-base;
+  padding-right: 2px;
+  width: 15px;
+}
+.Nav {
+  position: relative;
+  border-bottom: 1px solid $grey-2;
+  white-space: nowrap;
+  overflow: auto;
+  width: 100%;
+  padding: 0 !important;
+  margin: 0 15px;
+
+  &-item {
+    display: inline-block;
+    margin: 0 20px;
+    cursor: pointer;
+    color: $grey-3;
+
+    &:nth-child(1) {
+      margin-left: 0;
+    }
+
+    &:hover {
+      @extend %shared-border;
+    }
+  }
+
+  .is-active {
+    @extend %shared-border;
+  }
+}
+.SearchPage {
+  margin-top: 40px;
+  @media only screen and (max-width: 768px) {
+    border-right: none;
+    align-content: center;
+    padding-left: 20px;
+  }
+  &-result {
+    padding-right: 20px;
+    border-right: 1px solid $grey-2;
+    @media only screen and (max-width: 768px) {
+      border-right: none;
+      padding-right: none;
+      align-content: center;
+    }
+  }
+}
+.Card {
+  display: block;
+  position: relative;
+
+  padding: 15px 0;
+  border-bottom: 1px solid $grey-2;
+  overflow-y: auto;
+  &-img {
+    display: inline;
+    vertical-align: top;
+    max-width: 300px;
+    max-height: 300px;
+
+    &-src {
+      vertical-align: top;
+      max-width: 80px;
+      max-height: 80px;
+      &--round {
+        border-radius: 50px;
+      }
+    }
+  }
+  &-info {
+    display: inline-block;
+    margin-left: 20px;
+    width: 80%;
+    @media only screen and (max-width: 768px) {
+      width: 65%;
+    }
+
+    &-tag {
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: $font-size-xxs;
+      color: $grey-3;
+      padding-top: 4px;
+    }
+    &-details {
+      &--title {
+        font-size: $font-size-m;
+        padding: 4px 0;
+      }
+      &--excerpt {
+        font-size: $font-size-base;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      &--publish {
+        font-size: $font-size-s;
+        color: $grey-3;
+      }
+
+      &--number {
+        @media only screen and (max-width: 768px) {
+          margin-top: 20px;
+        }
+        font-size: $font-size-s;
+        &::before {
+          @extend %shared-before-props;
+          content: '\2706';
+        }
+      }
+      &--email {
+        font-size: $font-size-s;
+        &::before {
+          @extend %shared-before-props;
+          content: '\2709';
+        }
+      }
+    }
+  }
+}
+
+.SideBar {
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
+  &-widget {
+    padding-left: 30px;
+
+    &-heading {
+      padding: 10px 0;
+      font-size: $font-size-base;
+      color: $grey-3;
+      border-bottom: 1px solid $grey-2;
+    }
+    &-viewAll {
+      padding: 15px 0;
+    }
+    &-files {
+    }
+  }
+}
+
+.Files {
+  display: block;
+  position: relative;
+  padding: 15px 0;
+
+  overflow-y: auto;
+  &-icon {
+    display: inline;
+    vertical-align: top;
+    max-width: 300px;
+    max-height: 300px;
+
+    &-src {
+      border-radius: 3px;
+      vertical-align: top;
+      max-width: 50px;
+      max-height: 50px;
+    }
+  }
+  &-info {
+    display: inline-block;
+    margin-left: 15px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }

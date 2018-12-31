@@ -4,6 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 var webpack = require('webpack');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   template: './src/index.html',
   filename: 'index.html',
@@ -11,7 +12,7 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 });
 
 module.exports = env => {
-  const mode = env.NODE_ENV;
+  const mode = env ? env.NODE_ENV : 'development';
   return {
     mode: mode,
     entry: ['./src/js/main.js', './src/scss/main.scss'],
@@ -45,6 +46,7 @@ module.exports = env => {
     },
 
     plugins: [
+      new webpack.HotModuleReplacementPlugin(),
       new webpack.ProvidePlugin({
         $: 'jquery',
         jQuery: 'jquery',
@@ -62,9 +64,7 @@ module.exports = env => {
       compress: false,
       port: 9000,
       noInfo: false,
-      hot: true,
-      hotOnly: true,
-      inline: true,
+
       open: true,
       overlay: {
         warnings: true,
